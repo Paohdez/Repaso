@@ -21,7 +21,7 @@ class LibroController extends Controller
             'isbn.required' => 'Por favor, ingresa el ISBN de 13 dígitos.',
             'titulo.required' => 'El título es obligatorio.',
             'año.between' => 'El año debe ser un valor entre 1000 y el año actual.',
-            // Agrega otros mensajes personalizados según sea necesario
+            // Mas mensajes 
         ];
     
         $validated = $request->validate([

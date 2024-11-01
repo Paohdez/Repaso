@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Libro</title>
-    <!-- Incluye Bootstrap -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-light">
 
-    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="{{ route('principal') }}">Biblioteca Repaso</a>
@@ -29,11 +27,9 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
     <main class="container my-5">
         <h1 class="text-center text-primary mb-4" style="font-size: 2.5rem; font-weight: bold;">Registrar Libro</h1>
 
-        <!-- Mostrar errores -->
         @if ($errors->any())
             <div class="alert alert-danger">
                 <strong>¡Errores encontrados!</strong> Por favor corrige los siguientes errores:
@@ -51,7 +47,6 @@
             </div>
         @endif
 
-        <!-- Formulario de registro -->
         <form action="{{ route('guardarLibro') }}" method="POST" class="bg-white p-4 rounded shadow-sm">
             @csrf
             <div class="mb-3">
@@ -89,7 +84,6 @@
         </form>
     </main>
 
-    <!-- Pie de página -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <div class="container">
             <p class="mb-0">&copy; Biblioteca Repaso - {{ date('Y') }}</p>
